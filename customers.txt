@@ -1,0 +1,18 @@
+asd,0,0,0,asd,asd,asd,asd,asd,asd,asd
+zxc,0,0,1,zxc,zxc,zxc,zxc,zxc,zxc,zxc
+abc,1,1,7,abc,abc,abc,abc,abc,abc,abc
+efg,1,1,8,efg,efg,efg,efg,efg,efg,efg
+a,1,1,8,a,a,a,a,a,a,a
+b,2,0,0, , , , , , ,
+c,3,0,1, , , , , , ,
+d,1,0,2, , , , , , ,
+e,2,0,3, , , , , , ,
+f,3,0,4, , , , , , ,
+g,1,0,5, , , , , , ,
+h,2,1,6, , , , , , ,
+i,3,1,7, , , , , , ,
+j,1,1,8, , , , , , ,
+k,2,2,9, , , , , , ,
+l,3,2,10, , , , , , ,
+l,3,2,11, , , , , , ,
+m,3,2,12, , , , , , ,

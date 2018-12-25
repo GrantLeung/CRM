@@ -1,0 +1,2 @@
+asd,0,0,0,asd,asd,asd,asd,asd,asd,asd
+zxc,0,0,1,zxc,zxc,zxc,zxc,zxc,zxc,zxc

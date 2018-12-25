@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatItem</class>
+ <widget class="QWidget" name="StatItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>864</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="BarChart" name="tab">
+      <attribute name="title">
+       <string>Province</string>
+      </attribute>
+     </widget>
+     <widget class="PieChart" name="tab_2">
+      <attribute name="title">
+       <string>Area</string>
+      </attribute>
+      <widget class="QComboBox" name="comboBox">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>20</y>
+         <width>101</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="LineChart" name="tab_3">
+      <attribute name="title">
+       <string>页</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BarChart</class>
+   <extends>QWidget</extends>
+   <header>barchart.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PieChart</class>
+   <extends>QWidget</extends>
+   <header>piechart.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LineChart</class>
+   <extends>QWidget</extends>
+   <header>linechart.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
