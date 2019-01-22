@@ -4,6 +4,9 @@
 #include <QtWidgets>
 #include <QtCharts>
 #include <QPaintEvent>
+#include "DrillDown\drilldownchart.h"
+#include "DrillDown\drilldownslice.h"
+
 
 class PieChart : public QWidget
 {
@@ -12,14 +15,20 @@ class PieChart : public QWidget
 public:
 	explicit PieChart(QWidget *parent = Q_NULLPTR);
 	~PieChart();
-	void paintEvent(QPaintEvent*);
+	
+	// 得到相应的数据内容
 	void getModel(QStandardItemModel* mModel, QStringList mAllProvince);
+	QChart* show();
+public:
+	// chart的背景项
+	QChartView* chartView;
+	
 	public slots:
 	void changeStyle(int index);
 private:
-	QPieSeries* series;
-	QChartView* chartView;
+	
 	QStandardItemModel* model;
+	DrilldownChart* chart;
 
 	QStringList AllArea;
 	QStringList modelArea;

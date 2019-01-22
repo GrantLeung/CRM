@@ -4,29 +4,34 @@ PieChart::PieChart(QWidget *parent)
 {
 	Q_UNUSED(parent);
 	model = new QStandardItemModel;
-	series = new QPieSeries;
-	series->setHoleSize(0.40);
 	QGridLayout* layout = new QGridLayout;
-	chartView = new QChartView;
+	
+	chartView = new QChartView(show());
+	chartView->setChart(chart);
 	chartView->setRenderHint(QPainter::Antialiasing);
-	chartView->chart()->setTitle("DonutChart Example");
-	chartView->chart()->addSeries(series);
-	chartView->chart()->legend()->setAlignment(Qt::AlignBottom);
-	chartView->chart()->setTheme(QChart::ChartThemeBlueCerulean);
-	chartView->chart()->legend()->setFont(QFont("Arial", 10));
-	chartView->chart()->setAnimationOptions(QChart::SeriesAnimations);
-	layout->addWidget(chartView, 0, 0);
+	layout->addWidget(chartView, 1, 1);
 	setLayout(layout);
+}
+
+QChart* PieChart::show()
+{
+	chart = new DrilldownChart();
+	chart->setTitle("DonutChart Example");
+	chart->legend()->setAlignment(Qt::AlignBottom);
+	chart->setTheme(QChart::ChartThemeBlueCerulean);
+	chart->legend()->setFont(QFont("Arial", 10));
+	chart->setAnimationOptions(QChart::AllAnimations);
+	return chart;
 }
 
 void PieChart::changeStyle(int index)
 {
 	switch (index)
 	{
-	case 0: chartView->chart()->setTheme(QChart::ChartThemeBlueCerulean); break;
-	case 1: chartView->chart()->setTheme(QChart::ChartThemeBlueIcy); break;
-	case 2: chartView->chart()->setTheme(QChart::ChartThemeBrownSand); break;
-	case 3: chartView->chart()->setTheme(QChart::ChartThemeDark); break;
+	case 0: chart->setTheme(QChart::ChartThemeBlueCerulean); break;
+	case 1: chart->setTheme(QChart::ChartThemeBrownSand); break;
+	case 2: chart->setTheme(QChart::ChartThemeDark); break;
+	case 3: chart->setTheme(QChart::ChartThemeLight); break;
 	}
 }
 
@@ -34,6 +39,12 @@ void PieChart::getModel(QStandardItemModel* mModel, QStringList mAllArea)
 {
 	this->model = mModel;
 	this->AllArea = mAllArea;
+
+	QPieSeries* series = new QPieSeries;
+	series->setHoleSize(0.40);
+	chart->addSeries(series);
+	chart->changeSeries(series);
+	connect(series, SIGNAL(clicked(QPieSlice*)), chart, SLOT(handleSliceClicked(QPieSlice*)));
 	for (int row = 0; row < model->rowCount(); row++)
 	{
 		QModelIndex index = model->index(row, 2);
@@ -43,30 +54,41 @@ void PieChart::getModel(QStandardItemModel* mModel, QStringList mAllArea)
 			modelArea.append(area);
 		}
 	}
+
 	for (int i = 0; i < modelArea.size(); i++)
-	{
-		QString area = modelArea[i];
-		int total(0);
+	{	
+		int total_area(0);
+		
+		QPieSeries* series_province = new QPieSeries;
+		connect(series_province, SIGNAL(clicked(QPieSlice*)), chart, SLOT(handleSliceClicked(QPieSlice*)));
+		QStringList area_province;
 		for (int row = 0; row < model->rowCount(); row++)
 		{
-			QModelIndex index = model->index(row, 2);
-			if (model->data(index) == area)
-				total++;
-
+			int total_province(0);
+			QString province = model->data(model->index(row, 3)).toString();
+			QString area = model->data(model->index(row, 2)).toString();
+			if (area == modelArea[i])
+			{
+				total_area++;
+				if (!area_province.contains(province))
+				{
+					area_province.append(province);
+					for (int j = row; j < model->rowCount(); j++)
+					{
+						if (model->data(model->index(j, 3)).toString() == province)
+							total_province++;
+					}
+					*series_province << new DrilldownSlice(total_province, province, series);
+				}
+			}	
 		}
-		series->append(area, total);
+		*series << new DrilldownSlice(total_area, modelArea[i], series_province);
 	}
-}
-
-
-void PieChart::paintEvent(QPaintEvent*)
-{
-	
 }
 
 PieChart::~PieChart()
 {
-	chartView->chart()->removeAllSeries();
+	chart->removeAllSeries();
 	if (chartView != nullptr)
 	{
 		chartView = nullptr;
@@ -76,10 +98,5 @@ PieChart::~PieChart()
 	{
 		model = nullptr;
 		delete model;
-	}
-	if (series != nullptr)
-	{
-		series = nullptr;
-		delete series;
 	}
 }

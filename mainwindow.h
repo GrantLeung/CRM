@@ -6,6 +6,8 @@
 #include <QStandardItemModel>
 #include <QTreeWidget>
 #include <QVector>
+#include <QtXml>
+#include <QDomDocument>
 #include "dlgitem.h"
 #include "statitem.h"
 
@@ -29,14 +31,18 @@ public:
     void ClearData();
 
     void OpenDb(QString fileName);
+	void readXml(QFile *file);
     void SaveToDb(QString fileName);
     void InsertToDb(Customer* item);
     void DeleteFromDb(QString name);
 
+	bool eventFilter(QObject *watched, QEvent *event);
 private slots:
     void onMenuOpen(bool checked);
 	void onMenuSave(bool checked);
 	void onMenuStat(bool checked);
+	void onMenuData(bool checked);
+	void onMenuList(bool checked);
 
     void on_btnSearch_clicked();        //搜索按钮，关键字过滤
     void on_btnAdd_clicked();           //添加

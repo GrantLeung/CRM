@@ -1,6 +1,8 @@
-﻿#include "dlgitem.h"
+﻿
+#include "dlgitem.h"
 #include "ui_dlgitem.h"
 #include <QDebug>
+
 
 DlgItem::DlgItem(Customer* item,QWidget *parent) :
     QDialog(parent),
@@ -173,22 +175,22 @@ void DlgItem::on_btnCancel_clicked()
 int DlgItem::String2Province(QString s)
 {
     QStringList AllProvince;
-	AllProvince << QStringLiteral("山东") << QStringLiteral("浙江") << QStringLiteral("江苏") << QStringLiteral("安徽") << QStringLiteral("上海") << QStringLiteral("福建")
-		<< QStringLiteral("广东") << QStringLiteral("广西") << QStringLiteral("海南")
-		<< QStringLiteral("湖北") << QStringLiteral("湖南") << QStringLiteral("河南") << QStringLiteral("江西")
-		<< QStringLiteral("北京") << QStringLiteral("天津") << QStringLiteral("河北") << QStringLiteral("山西") << QStringLiteral("内蒙")
-		<< QStringLiteral("宁夏") << QStringLiteral("新疆") << QStringLiteral("青海") << QStringLiteral("陕西") << QStringLiteral("甘肃") << QStringLiteral("四川") << QStringLiteral("云南") << QStringLiteral("贵州") << QStringLiteral("西藏") << QStringLiteral("重庆") << QStringLiteral("辽宁") << QStringLiteral("吉林") << QStringLiteral("黑龙江");
+	AllProvince << tr("山东") << tr("浙江") << tr("江苏") << tr("安徽") << tr("上海") << tr("福建")
+		<< tr("广东") << tr("广西") << tr("海南")
+		<< tr("湖北") << tr("湖南") << tr("河南") << tr("江西")
+		<< tr("北京") << tr("天津") << tr("河北") << tr("山西") << tr("内蒙")
+		<< tr("宁夏") << tr("新疆") << tr("青海") << tr("陕西") << tr("甘肃") << tr("四川") << tr("云南") << tr("贵州") << tr("西藏") << tr("重庆") << tr("辽宁") << tr("吉林") << tr("黑龙江");
     return AllProvince.indexOf(s);
 }
 
 QString DlgItem::Province2String(int n)
 {
     QStringList AllProvince;
-	AllProvince << QStringLiteral("山东") << QStringLiteral("浙江") << QStringLiteral("江苏") << QStringLiteral("安徽") << QStringLiteral("上海") << QStringLiteral("福建")
-		<< QStringLiteral("广东") << QStringLiteral("广西") << QStringLiteral("海南")
-		<< QStringLiteral("湖北") << QStringLiteral("湖南") << QStringLiteral("河南") << QStringLiteral("江西")
-		<< QStringLiteral("北京") << QStringLiteral("天津") << QStringLiteral("河北") << QStringLiteral("山西") << QStringLiteral("内蒙")
-		<< QStringLiteral("宁夏") << QStringLiteral("新疆") << QStringLiteral("青海") << QStringLiteral("陕西") << QStringLiteral("甘肃") << QStringLiteral("四川") << QStringLiteral("云南") << QStringLiteral("贵州") << QStringLiteral("西藏") << QStringLiteral("重庆") << QStringLiteral("辽宁") << QStringLiteral("吉林") << QStringLiteral("黑龙江");
+	AllProvince << tr("山东") << tr("浙江") << tr("江苏") << tr("安徽") << tr("上海") << tr("福建")
+		<< tr("广东") << tr("广西") << tr("海南")
+		<< tr("湖北") << tr("湖南") << tr("河南") << tr("江西")
+		<< tr("北京") << tr("天津") << tr("河北") << tr("山西") << tr("内蒙")
+		<< tr("宁夏") << tr("新疆") << tr("青海") << tr("陕西") << tr("甘肃") << tr("四川") << tr("云南") << tr("贵州") << tr("西藏") << tr("重庆") << tr("辽宁") << tr("吉林") << tr("黑龙江");
 	if(n>=0 && n<AllProvince.size())
     {
         return AllProvince[n];

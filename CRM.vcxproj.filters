@@ -45,6 +45,12 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="qcustomplot">
+      <UniqueIdentifier>{9196f5d7-4c35-46cb-ad10-8fd737ffbe04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DrillDown">
+      <UniqueIdentifier>{f083f66b-893e-4a97-9e0d-dd0cf81f013d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dlgitem.cpp">
@@ -62,10 +68,22 @@
     <ClCompile Include="piechart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="linechart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="barchart.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linechart.cpp">
+    <ClCompile Include="qcustomplot\qcustomplot.cpp">
+      <Filter>qcustomplot</Filter>
+    </ClCompile>
+    <ClCompile Include="DrillDown\drilldownchart.cpp">
+      <Filter>DrillDown</Filter>
+    </ClCompile>
+    <ClCompile Include="DrillDown\drilldownslice.cpp">
+      <Filter>DrillDown</Filter>
+    </ClCompile>
+    <ClCompile Include="dataVisual.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -76,16 +94,28 @@
     <QtMoc Include="mainwindow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="statitem.h">
+    <QtMoc Include="barchart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="linechart.h">
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="piechart.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="barchart.h">
+    <QtMoc Include="statitem.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="linechart.h">
+    <QtMoc Include="qcustomplot\qcustomplot.h">
+      <Filter>qcustomplot</Filter>
+    </QtMoc>
+    <QtMoc Include="DrillDown\drilldownchart.h">
+      <Filter>DrillDown</Filter>
+    </QtMoc>
+    <QtMoc Include="DrillDown\drilldownslice.h">
+      <Filter>DrillDown</Filter>
+    </QtMoc>
+    <QtMoc Include="dataVisual.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

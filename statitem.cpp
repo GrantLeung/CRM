@@ -9,9 +9,9 @@ StatItem::StatItem(QWidget *parent)
 {
 	ui->setupUi(this);
 	ui->comboBox->addItem("BlueCerulean");
-	ui->comboBox->addItem("BlueIcy");
 	ui->comboBox->addItem("BrownSand");
 	ui->comboBox->addItem("Dark");
+	ui->comboBox->addItem("Light");
 	connect(ui->comboBox, SIGNAL(currentIndexChanged(int)), ui->tab_2, SLOT(changeStyle(int)));
 }
 

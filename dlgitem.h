@@ -7,7 +7,7 @@ namespace Ui {
 class DlgItem;
 }
 
-typedef struct _Customer{
+struct Customer{
     QString name;
     int type;
     int area;
@@ -19,7 +19,7 @@ typedef struct _Customer{
     QString buy;
     QString research;
     QString remark;
-}Customer,*PCustomer;
+};
 
 class DlgItem : public QDialog
 {
@@ -30,7 +30,7 @@ public:
     ~DlgItem();
 
 signals:
-    void sigAddItem(Customer*);
+    void sigAddItem(Customer* );
 
 private slots:
     void on_btnAdd_clicked();

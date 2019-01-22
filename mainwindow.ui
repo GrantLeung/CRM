@@ -14,403 +14,412 @@
    <string>3weijia</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <property name="spacing">
-     <number>5</number>
-    </property>
-    <item>
-     <widget class="QTreeWidget" name="treeWidget">
-      <property name="maximumSize">
-       <size>
-        <width>160</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <column>
-       <property name="text">
-        <string>区域/省份</string>
-       </property>
-      </column>
-      <item>
-       <property name="text">
-        <string>全部</string>
-       </property>
-       <item>
-        <property name="text">
-         <string>华东</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>山东</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>浙江</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>江苏</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>安徽</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>上海</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>福建</string>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>华南</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>广东</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>广西</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>海南</string>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>华中</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>湖北</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>湖南</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>河南</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>江西</string>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>华北</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>北京</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>天津</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>河北</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>山西</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>内蒙</string>
-         </property>
-        </item>
-       </item>
-       <item>
-        <property name="text">
-         <string>其他</string>
-        </property>
-        <item>
-         <property name="text">
-          <string>宁夏</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>新疆</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>青海</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>陕西</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>甘肃</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>四川</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>云南</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>贵州</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>西藏</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>重庆</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>辽宁</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>吉林</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>黑龙江</string>
-         </property>
-        </item>
-       </item>
-      </item>
-     </widget>
-    </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <property name="spacing">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
        <number>0</number>
       </property>
-      <item>
-       <widget class="QWidget" name="widget" native="true">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <property name="spacing">
-          <number>5</number>
-         </property>
-         <property name="leftMargin">
-          <number>2</number>
-         </property>
-         <property name="topMargin">
-          <number>4</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <property name="bottomMargin">
-          <number>4</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="label_5">
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>5</number>
+             </property>
+             <property name="leftMargin">
+              <number>2</number>
+             </property>
+             <property name="topMargin">
+              <number>4</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>筛选：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox">
+               <property name="minimumSize">
+                <size>
+                 <width>200</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>200</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <item>
+                <property name="text">
+                 <string>所有类型</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>企业</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>高校</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>研究所</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>代理</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>外</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>政府机构</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>部队</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>第三方</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>关键字：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>200</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnSearch">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>25</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>搜索</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnAdd">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>增加</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btnDelete">
+               <property name="minimumSize">
+                <size>
+                 <width>80</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>删除</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableView" name="tableView">
+            <attribute name="horizontalHeaderHighlightSections">
+             <bool>false</bool>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="treeWidget">
+          <property name="maximumSize">
+           <size>
+            <width>160</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <column>
            <property name="text">
-            <string>筛选：</string>
+            <string>区域/省份</string>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="comboBox">
-           <property name="minimumSize">
-            <size>
-             <width>200</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>200</width>
-             <height>16777215</height>
-            </size>
-           </property>
-           <item>
-            <property name="text">
-             <string>所有类型</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>企业</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>高校</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>研究所</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>代理</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>外</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>政府机构</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>部队</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>第三方</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_4">
+          </column>
+          <item>
            <property name="text">
-            <string>关键字：</string>
+            <string>全部</string>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEdit">
-           <property name="minimumSize">
-            <size>
-             <width>150</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>200</width>
-             <height>16777215</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="btnSearch">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>25</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>搜索</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="btnAdd">
-           <property name="minimumSize">
-            <size>
-             <width>80</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>增加</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="btnDelete">
-           <property name="minimumSize">
-            <size>
-             <width>80</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>删除</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QTableView" name="tableView">
-        <attribute name="horizontalHeaderHighlightSections">
-         <bool>false</bool>
-        </attribute>
-       </widget>
-      </item>
-     </layout>
+           <item>
+            <property name="text">
+             <string>华东</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>山东</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>浙江</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>江苏</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>安徽</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>上海</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>福建</string>
+             </property>
+            </item>
+           </item>
+           <item>
+            <property name="text">
+             <string>华南</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>广东</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>广西</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>海南</string>
+             </property>
+            </item>
+           </item>
+           <item>
+            <property name="text">
+             <string>华中</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>湖北</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>湖南</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>河南</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>江西</string>
+             </property>
+            </item>
+           </item>
+           <item>
+            <property name="text">
+             <string>华北</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>北京</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>天津</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>河北</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>山西</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>内蒙</string>
+             </property>
+            </item>
+           </item>
+           <item>
+            <property name="text">
+             <string>其他</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>宁夏</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>新疆</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>青海</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>陕西</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>甘肃</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>四川</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>云南</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>贵州</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>西藏</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>重庆</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>辽宁</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>吉林</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>黑龙江</string>
+             </property>
+            </item>
+           </item>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="dataVisual" name="page_2"/>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -432,9 +441,11 @@
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
-     <string>图标</string>
+     <string>图表</string>
     </property>
     <addaction name="action_3"/>
+    <addaction name="action_4"/>
+    <addaction name="action_5"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
@@ -454,8 +465,26 @@
     <string>统计</string>
    </property>
   </action>
+  <action name="action_4">
+   <property name="text">
+    <string>数据</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>表单</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>dataVisual</class>
+   <extends>QWidget</extends>
+   <header>dataVisual.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

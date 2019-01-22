@@ -15,7 +15,7 @@ QChart* LineChart::showChart()
 	QBarSeries *series = new QBarSeries();
 	QBarCategoryAxis *axis = new QBarCategoryAxis();
 	QStringList Model_AllType;
-	QStringList Model_AllProvince;
+	QStringList Model_AllArea;
 	QBarSet* set;
 	for (int row = 0; row < Model->rowCount(); row++)
 	{
@@ -27,17 +27,17 @@ QChart* LineChart::showChart()
 	}
 	for (int row = 0; row < Model->rowCount(); row++)
 	{
-		QString Province = Model->data(Model->index(row, 3)).toString();
-		if (!Model_AllProvince.contains(Province))
+		QString Area = Model->data(Model->index(row, 2)).toString();
+		if (!Model_AllArea.contains(Area))
 		{
-			Model_AllProvince << Province;
-			set = new QBarSet(Province);
+			Model_AllArea << Area;
+			set = new QBarSet(Area);
 			for (int i = 0; i < Model_AllType.size(); i++)
 			{
 				int num = 0;
 				for (int row = 0; row < Model->rowCount(); row++)
 				{
-					if (Model_AllType.value(i) == Model->data(Model->index(row, 1)).toString() && Province == Model->data(Model->index(row, 3)).toString())
+					if (Model_AllType.value(i) == Model->data(Model->index(row, 1)).toString() && Area == Model->data(Model->index(row, 2)).toString())
 						num++;
 				}
 				set->append(num);

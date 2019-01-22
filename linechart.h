@@ -13,6 +13,7 @@ public:
 	~LineChart();
 	void getModel(QStandardItemModel* , QStringList);
 	QChart* showChart();
+	QChart* setChart();
 private:
 	QChartView* chartView;
 	QStandardItemModel* Model;
